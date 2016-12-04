@@ -2,78 +2,91 @@
 
 
 {$IFDEF VER310}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi101Berlin}
   {$DEFINE DELPHI_101BERLIN}
   {$DEFINE Delphi101BerlinUp}
   {$DEFINE DELPHI_101BERLIN_UP}
 {$ENDIF}
 {$IFDEF VER300}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi10Seattle}
   {$DEFINE DELPHI_10SEATTLE}
   {$DEFINE Delphi10SeattleUp}
   {$DEFINE DELPHI_10SEATTLE_UP}
 {$ENDIF}
 {$IFDEF VER290}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE8}
   {$DEFINE DELPHI_XE8}
   {$DEFINE DelphiXE8Up}
   {$DEFINE DELPHI_XE8_UP}
 {$ENDIF}
 {$IFDEF VER280}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE7}
   {$DEFINE DELPHI_XE7}
   {$DEFINE DelphiXE7Up}
   {$DEFINE DELPHI_XE7_UP}
 {$ENDIF}
 {$IFDEF VER270}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE6}
   {$DEFINE DELPHI_XE6}
   {$DEFINE DelphiXE6Up}
   {$DEFINE DELPHI_XE6_UP}
 {$ENDIF}
 {$IFDEF VER260}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE5}
   {$DEFINE DELPHI_XE5}
   {$DEFINE DelphiXE5Up}
   {$DEFINE DELPHI_XE5_UP}
 {$ENDIF}
 {$IFDEF VER250}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE4}
   {$DEFINE DELPHI_XE4}
   {$DEFINE DelphiXE4Up}
   {$DEFINE DELPHI_XE4_UP}
 {$ENDIF}
 {$IFDEF VER240}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE3}
   {$DEFINE DELPHI_XE3}
   {$DEFINE DelphiXE3Up}
   {$DEFINE DELPHI_XE3_UP}
 {$ENDIF}
 {$IFDEF VER230}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE2}
   {$DEFINE DELPHI_XE2}
   {$DEFINE DelphiXE2Up}
   {$DEFINE DELPHI_XE2_UP}
 {$ENDIF}
 {$IFDEF VER220}
+  {$DEFINE IsDelphi}
   {$DEFINE DelphiXE}
   {$DEFINE DELPHI_XE}
   {$DEFINE DelphiXEUp}
   {$DEFINE DELPHI_XE_UP}
 {$ENDIF}
 {$IFDEF VER210}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi2010}
   {$DEFINE DELPHI_2010}
   {$DEFINE Delphi2010Up}
   {$DEFINE DELPHI_2010_UP}
 {$ENDIF}
 {$IFDEF VER200}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi2009}
   {$DEFINE DELPHI_2009}
   {$DEFINE Delphi2009Up}
   {$DEFINE DELPHI_2009_UP}
 {$ENDIF}
 {$IFDEF VER185}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi2007}
   {$DEFINE DELPHI_2007}
   {$DEFINE Delphi2007Up}
@@ -81,6 +94,7 @@
 {$ENDIF}
 {$IFDEF VER180}
   {$IFNDEF VER185}
+    {$DEFINE IsDelphi}
     {$DEFINE Delphi2006}
     {$DEFINE DELPHI_2006}
     {$DEFINE Delphi2006Up}
@@ -88,40 +102,53 @@
   {$ENDIF}
 {$ENDIF}
 {$IFDEF VER170}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi2005}
   {$DEFINE DELPHI_2005}
   {$DEFINE Delphi2005Up}
   {$DEFINE DELPHI_2005_UP}
 {$ENDIF}
 {$IFDEF VER150}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi7}
   {$DEFINE DELPHI_7}
   {$DEFINE Delphi7Up}
   {$DEFINE DELPHI_7_UP}
 {$ENDIF}
 {$IFDEF VER140}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi6}
   {$DEFINE DELPHI_6}
   {$DEFINE Delphi6Up}
   {$DEFINE DELPHI_6_UP}
 {$ENDIF}
 {$IFDEF VER130}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi5}
   {$DEFINE DELPHI_5}
   {$DEFINE Delphi5Up}
   {$DEFINE DELPHI_5_UP}
 {$ENDIF}
 {$IFDEF VER120}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi4}
   {$DEFINE DELPHI_4}
   {$DEFINE Delphi4Up}
   {$DEFINE DELPHI_4_UP}
 {$ENDIF}
 {$IFDEF VER100}
+  {$DEFINE IsDelphi}
   {$DEFINE Delphi3}
   {$DEFINE DELPHI_3}
   {$DEFINE Delphi3Up}
   {$DEFINE DELPHI_3_UP}
+{$ENDIF}
+
+
+{$IFDEF IsDelphi}
+  {$DEFINE IS_DELPHI}
+{$ELSE}  
+  {$MESSAGE FATAL 'Unknown Delphi version'}
 {$ENDIF}
 
 
@@ -673,6 +700,9 @@
 // HasRegion
 // HAS_REGION
 //     {$REGION}/{$ENDREGION} directives
+// HasUnitWideStrUtils
+// HAS_UNIT_WIDESTRUTILS
+//     Unit WideStrUtils.pas exists
 // HasUnitHTTPProd
 // HAS_UNIT_HTTPPROD
 //     Unit HTTPProd.pas exists
@@ -722,6 +752,8 @@
   {$DEFINE HAS_USES_WILDCARDS}
   {$DEFINE HasRegion}
   {$DEFINE HAS_REGION}
+  {$DEFINE HasUnitWideStrUtils}
+  {$DEFINE HAS_UNIT_WIDESTRUTILS}
   {$DEFINE HasUnitHTTPProd}
   {$DEFINE HAS_UNIT_HTTPPROD}
   // New features of Delphi 2006 but practically work in Delphi 2005 too.

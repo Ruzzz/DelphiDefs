@@ -13,8 +13,9 @@ RU Links:
 - http://xlench.bget.ru/doku.php/delphi/classes/new-comps = "Нововведения по версиям Delphi"
 
 RU:
+- Проверить {$IFDEF CONDITIONALEXPRESSIONS}. Также проверить для dpk
 - Отказаться от {$IF CompilerVersion >= N} ?
-- Использовать RtlVersion?
+- Использовать RtlVersion? Например {$IF RTLVersion >= 14.0} {$DEFINE HAS_ERROUTPUT} {$IFEND} 
 - Использовать префиксы Has, Use, Is и т.д.?
 - Использовать оба стиля WordWord и WORD_WORD?
 - Использовать «общепринятые» сокращения?

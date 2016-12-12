@@ -6,6 +6,7 @@ EN Links:
 - http://docwiki.embarcadero.com/RADStudio/Berlin/en/Compiler_Versions
 - http://wiki.delphi-jedi.org/wiki/JEDI_Help:RTLFeatures
 - https://github.com/jin-x/delphi-units/blob/master/DelphiVerDef7x/DelphiVerDef7x.inc
+- https://github.com/project-jedi/jedi/blob/master/jedi.inc
 
 RU Links:
 - http://www.gunsmoker.ru/2013/05/modern-delphi.html

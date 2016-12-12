@@ -1,4 +1,5 @@
 EN Links:
+- http://docs.embarcadero.com/products/rad_studio/ See What's New
 - https://stackoverflow.com/questions/8460037/list-of-delphi-language-features-and-version-in-which-they-were-introduced-depre
 - http://docwiki.embarcadero.com/RADStudio/Berlin/en/Delphi_Compiler_Directives_(List)_Index
 - http://docwiki.embarcadero.com/RADStudio/Berlin/en/Conditional_compilation_(Delphi)

@@ -13,6 +13,7 @@ RU Links:
 - http://xlench.bget.ru/doku.php/delphi/classes/new-comps = "Нововведения по версиям Delphi"
 
 RU:
+- From System.pas comment: CompilerVersion can be tested in $IF expressions and should be used instead of testing for the VERxxx conditional define.
 - Проверить {$IFDEF CONDITIONALEXPRESSIONS}. Также проверить для dpk
 - Отказаться от {$IF CompilerVersion >= N} ?
 - Использовать RtlVersion? Например {$IF RTLVersion >= 14.0} {$DEFINE HAS_ERROUTPUT} {$IFEND} 
